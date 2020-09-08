@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CocktailDB</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://kit.fontawesome.com/483fec22dc.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-menu">
+        <div class="header-menu-title">
+          <h1><a><i class="fas fa-cocktail"></i>CocktailDB</a></h1>
+        </div>
+        <nav class="main-menu-navigation">
+          <ul class="menu-list" hidden>
+            <li id="catalog-link"><a>Main Page</a></li>
+            <li id="create-link"><a>Create Cocktail</a></li>
+            <li id="signup-link"><a>Sign up</a></li>
+            <li id="login-link"><a>Log in</a></li>
+            <li id="logout-link"><a>Log out</a></li>
+          </ul>
+        </nav>
+      </div>
+      <form class="header-search" action="#" method="post">
+        <input type="text" name="search-input" placeholder="Search...">
+      </form>
+      <a class="header-button" href="#">Sign up</a>
+      <a class="header-button" href="#">Log in</a>
+    </header>
+    <main>
+      <div class="sort-section">
+        <div class="filter">
+          <a class="filter-select" href="#">Filter</a>
+          <ul class="filter-list hidden">
+            <li><a href="#">Top</a></li>
+            <li><a href="#">All</a></li>
+          </ul>
+        </div>
+        <div class="sort">
+          <a class="sort-select" href="#" onclick="return false;">Sort</a>
+          <ul class="sort-list hidden">
+            <li><a href="#">Name</a></li>
+            <li><a href="#">Rating</a></li>
+            <li><a href="#">Date</a></li>
+          </ul>
+        </div>
+      </div>
+      <section class="catalog-grid"></section>
+    </main>
+    <footer>
+      <p class="copyright">Created by Danila Moiseenkov</p>
+    </footer>
+  </body>
+</html>
