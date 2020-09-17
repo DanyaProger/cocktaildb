@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CocktailDB</title>
+    <link rel="stylesheet" href="styles/login.css">
+    <script src="https://kit.fontawesome.com/483fec22dc.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-menu">
+        <div class="header-menu-title">
+          <h1><a><i class="fas fa-cocktail"></i>CocktailDB</a></h1>
+        </div>
+        <nav class="main-menu-navigation">
+          <ul class="menu-list" hidden>
+            <li id="catalog-link"><a>Main Page</a></li>
+            <li id="create-link"><a>Create Cocktail</a></li>
+            <li id="signup-link"><a>Sign up</a></li>
+            <li id="login-link"><a>Log in</a></li>
+            <li id="logout-link"><a>Log out</a></li>
+          </ul>
+        </nav>
+      </div>
+      <form class="header-search" action="#" method="post">
+        <input type="text" name="search-input" placeholder="Search...">
+      </form>
+      <a class="header-button" href="#">Sign up</a>
+      <a class="header-button" href="#">Log in</a>
+    </header>
+    <main>
+        <form class="login-form" action="#" method="post">
+            <label for="login-input">Login</label>
+            <input id="login-input" type="text" name="" value="" required>
+            <label for="login-input">Password</label>
+            <input id="password-input" type="password" name="" value="" required>
+            <button type="submit" name="button">Log in</button>
+        </form>
+    </main>
+    <footer>
+      <p class="copyright">Created by Danila Moiseenkov</p>
+    </footer>
+  </body>
+</html>

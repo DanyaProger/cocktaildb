@@ -51,6 +51,10 @@ header .header-menu-title {
   float: left;
 }
 
+.header-menu-title .fa-cocktail {
+  color: blue;
+}
+
 header .header-search {
   float: left;
   padding-left: 50px;
@@ -100,10 +104,6 @@ header .header-search input {
 
 .header-menu:hover .main-menu-navigation .menu-list {
   display: block;
-}
-
-.header-menu-title i {
-  color: orange;
 }
 
 /* HEADER END */
