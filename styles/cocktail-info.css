@@ -173,19 +173,16 @@ main {
 .ingredient1 {
   clip-path: inset(0 0 0 0);
   -webkit-clip-path: inset(0 0 0 0);
-  background-color: darkred;
 }
 
 .ingredient2 {
   clip-path: inset(33% 0 0 0);
   -webkit-clip-path: inset(33% 0 0 0);
-  background-color: grey;
 }
 
 .ingredient3 {
   clip-path: inset(66% 0 0 0);
   -webkit-clip-path: inset(66% 0 0 0);
-  background-color: darkblue;
 }
 
 .cocktail-title {
