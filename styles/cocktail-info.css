@@ -1,0 +1,365 @@
+* {
+  font-family: Helvetica Neue Light, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+}
+
+h1 {
+  font-weight: lighter;
+}
+
+.hidden {
+  display: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* HEADER */
+header {
+  display: block;
+  z-index: 100;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+  padding: 10px 10px 10px 50px;
+  height: 58px;
+}
+
+nav {
+    display: block;
+}
+
+header .header-menu-title {
+  float: left;
+}
+
+.header-menu-title .fa-cocktail {
+  color: blue;
+}
+
+header .header-search {
+  float: left;
+  padding-left: 50px;
+  padding-top: 3px;
+  height: 100%;
+}
+
+header .header-search input {
+  float: left;
+  box-sizing: border-box;
+  height: 35px;
+  width: 400px;
+  font-size: 1em;
+  outline: none;
+  padding-left: 5px; 
+}
+
+.header-button {
+    float: right;
+    font-size: 1em;
+    padding: 10px 10px;
+}
+
+.menu-list {
+  position: absolute;
+  top: 20px;
+  padding-top: 38px;
+}
+
+.menu-list li {
+  display: block;
+  padding: 10px;
+  background-color: rgb(44, 0, 102);
+  font-size: 1.5em;
+  width: 230px;
+}
+
+.menu-list li a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.menu-list li:hover {
+  background-color: #6f56ff;
+}
+
+.header-menu:hover .main-menu-navigation .menu-list {
+  display: block;
+}
+
+/* HEADER END */
+
+
+/* MAIN */
+
+main {
+  display: block;
+  min-height: 600px;
+  background-color: rgb(40, 40, 40);
+  color: white;
+  box-sizing: border-box;
+  padding: 25px 20%;
+}
+
+.cocktail-info {
+    background-color: rgb(50, 50, 50);
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+    min-width: 600px;
+}
+
+.cocktail-info-main {
+  display: flex;
+  height: 320px;
+  width: 100%;
+}
+
+.cocktail-picture-info {
+  height: 100%;
+  width: 40%;
+  background-color: rgb(80, 80, 80);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.cocktail-image {
+  position: relative;
+  margin-bottom: auto;
+  margin-top: 20px;
+}
+
+.cocktail-image img {
+  position: relative;
+  height: 170px;
+  z-index: 10;
+}
+
+.ingredient-container {
+  position: absolute;
+  top: 0;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 69.5%;
+  width: 90%;
+  border-radius: 0 0 5% 5%;
+  overflow: hidden;
+}
+
+.cocktail-ingredient {
+  position: absolute;
+  top: 0;
+  height:100%;
+  width:100%;
+}
+
+.ingredient1 {
+  clip-path: inset(0 0 0 0);
+  -webkit-clip-path: inset(0 0 0 0);
+  background-color: darkred;
+}
+
+.ingredient2 {
+  clip-path: inset(33% 0 0 0);
+  -webkit-clip-path: inset(33% 0 0 0);
+  background-color: grey;
+}
+
+.ingredient3 {
+  clip-path: inset(66% 0 0 0);
+  -webkit-clip-path: inset(66% 0 0 0);
+  background-color: darkblue;
+}
+
+.cocktail-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.5em;
+}
+
+/* STAR RATING */
+.star-rating {
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-top: auto;
+  text-align: center;
+}
+
+.star-rating-icon {
+	float: right;
+	padding-left: 2px;
+	cursor: pointer;
+}
+
+.star-rating-icon:last-child {
+	padding-left: 0;
+}
+
+.star-rating-input {
+	display: none;
+}
+.star-rating-icon:hover:before,
+.star-rating-icon:hover ~ .star-rating-icon:before,
+.star-rating-input:checked ~ .star-rating-icon:before {
+	color: yellow;
+}
+/* STAR RATING END */
+
+/* cocktail DETAILS */
+.cocktail-details {
+  height: 100%;
+  width: 60%;
+  padding: 30px;
+  font-size: 1.3em;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.ingredients {
+  margin-top: 20px;
+}
+
+.ingredients li {
+  margin-bottom: 5px;
+}
+
+.cocktail-description {
+  border-radius: 20px;
+  padding: 20px 50px;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.bottom-details {
+  margin-bottom: 0px;
+  margin-top: auto;
+}
+
+.bottom-details p {
+  margin-top: 5px;
+}
+/* cocktail DETAILS END*/
+
+.comments-section {
+  background-color: rgb(50, 50, 50);
+  margin-top: 20px;
+  box-sizing: border-box;
+  padding: 30px;
+  text-align: center;
+  min-width: 600px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: grey;
+}
+
+.comments-section form {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.comments-section textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  resize: none;
+  font-size: 1em;
+}
+
+.comments-section input[type="submit"] {
+  display: block;
+  margin: 0 0 0 auto;
+  border: none;
+  padding: 6px 15px;
+  cursor: pointer;
+  font-size: 1em;
+  background-color: white;
+}
+
+.comment-list-item{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.comment {
+  background-color: white;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  color: black;
+}
+
+.comment-info, .comment-text{
+  display: inline-block;
+  text-align: left;
+}
+
+.comment-info {
+  width: 20%;
+  box-sizing: border-box;
+}
+
+.comment-info p {
+  margin-bottom: 5px;
+}
+
+.comment-text {
+  width: 80%;
+  box-sizing: border-box;
+}
+
+/* MAIN END */
+
+
+/* FOOTER */
+
+footer {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 58px;
+  background-color: black;
+  font-weight: lighter;
+  min-width: 650px;
+  padding: 20px 50px 20px 50px;
+}
+
+footer .copyright {
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+/* FOOTER END*/
+
+/* HELPERS */
+
+.horizontal-seporator {
+  height: 1px;
+  background: grey;
+}
+
+/* HELPERS END*/

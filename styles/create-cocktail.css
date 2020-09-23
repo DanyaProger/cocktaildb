@@ -261,11 +261,6 @@ label {
   margin: 0 0 0 auto;
 }
 
-.vertical-seporator {
-    width: 1px;
-    background: grey;
-  }
-
 /* MAIN END */
 
 
@@ -289,4 +284,13 @@ footer .copyright {
 }
 
 /* FOOTER END*/
+
+/* HELPERS*/
+
+.vertical-seporator {
+  width: 1px;
+  background: grey;
+}
+
+/* HELPERS END*/
   
