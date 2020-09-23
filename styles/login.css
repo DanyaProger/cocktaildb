@@ -80,7 +80,6 @@ header .header-search input {
 
 .menu-list li {
   display: block;
-  padding: 10px;
   background-color: rgb(44, 0, 102);
   font-size: 1.5em;
   width: 230px;
@@ -88,6 +87,7 @@ header .header-search input {
 
 .menu-list li a {
   display: block;
+  padding: 10px;
   height: 100%;
   width: 100%;
 }
