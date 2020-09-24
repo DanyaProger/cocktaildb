@@ -29,16 +29,16 @@ ul {
 header {
   display: flex;
   z-index: 100;
-  width: 100%;
   box-sizing: border-box;
   background-color: black;
   color: white;
   padding: 10px 10px 10px 50px;
-  height: 58px;
+  min-width: 860px;
 }
 
 nav {
     display: block;
+    z-index: 20;
 }
 
 .header-menu-title .fa-cocktail {
@@ -106,10 +106,11 @@ header .header-search input {
 /* MAIN */
 main {
   display: block;
-  height: calc(100vh - 58px - 58px);
+  min-height: calc(100vh - 58px - 58px);
   background-color: rgb(40, 40, 40);
   box-sizing: border-box;
   padding: 100px 0;
+  min-width: 1000px;
 }
 
 main label {
@@ -158,13 +159,12 @@ label {
 
 .cocktail-image {
   position: relative;
-  height: 150px;
   margin-bottom: 50px;
 }
 
 .cocktail-image img {
   position: relative;
-  height: 100%;
+  height: 170px;
   z-index: 10;
 }
 
@@ -293,4 +293,108 @@ footer .copyright {
 }
 
 /* HELPERS END*/
-  
+
+/* SMARTPHONES */
+
+@media only screen
+    and (orientation: portrait) {
+
+    h1 {
+      font-size: 3.7em;
+    }
+
+    header {
+      padding: 30px 50px;
+    }
+
+    header .header-search {
+      margin-left: auto;
+    }
+
+    header .header-search input {
+      height: 60px;
+      width: 320px;
+      font-size: 1.8em;
+      padding-left: 15px;
+    }
+
+    .header-signup, .header-login {
+      display: none;
+    }
+
+    footer {
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      bottom: 0;
+      height: 100px;
+      font-size: 1.5em;
+      padding: 36px 0;
+    }
+
+    .menu-list {
+      top: 80px;
+      padding-top: 48px;
+    }
+
+    .menu-list li {
+      display: block;
+      padding: 20px;
+      font-size: 3em;
+      width: 430px;
+    }
+
+    .cocktail-form-block {
+      flex-direction: column;
+      height: auto;
+    }
+
+    .cocktail-form-left {
+      width: 100%;
+    }
+
+    .cocktail-image img{
+      height: 350px;
+    }
+
+    .cocktail-image {
+      margin-top: 50px;
+    }
+
+    .cocktail-form-right {
+      width: 100%;
+    }
+
+    .vertical-seporator {
+      height: 1px;
+      width: inherit;
+    }
+
+    #cocktail-name {
+      font-size: 2.5em;
+    }
+
+    .ingredients-select, .ingredient-value-input {
+      font-size: 2em;
+    }
+
+    .remove-ingredient-button {
+      font-size: 2em;
+      height: 60px;
+      width: 60px;
+    }
+
+    #add-ingredient-button {
+      font-size: 2.5em;
+      height: 70px;
+      width: 70px;
+    }
+
+    #description-textarea {
+      font-size: 2em;
+    }
+
+    #create-button {
+      font-size: 2em;
+    }
+  }

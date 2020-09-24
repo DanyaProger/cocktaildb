@@ -34,11 +34,12 @@ header {
   background-color: black;
   color: white;
   padding: 10px 10px 10px 50px;
-  height: 58px;
+  min-width: 860px;
 }
 
 nav {
     display: block;
+    z-index: 20;
 }
 
 .header-menu-title .fa-cocktail {
@@ -189,6 +190,7 @@ main {
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 1.5em;
+  text-align: center;
 }
 
 /* STAR RATING */
@@ -223,7 +225,7 @@ main {
 .cocktail-details {
   height: 100%;
   width: 60%;
-  padding: 30px;
+  padding: 10px 30px 30px 30px;
   font-size: 1.3em;
   box-sizing: border-box;
   text-align: center;
@@ -360,3 +362,107 @@ footer .copyright {
 }
 
 /* HELPERS END*/
+
+@media only screen
+    and (orientation: portrait) {
+
+    main {
+      min-height: calc(100vh - 58px - 58px);
+    }
+
+    h1 {
+      font-size: 3.7em;
+    }
+
+    header {
+      padding: 30px 50px;
+    }
+
+    header .header-search {
+      margin-left: auto;
+    }
+
+    header .header-search input {
+      height: 60px;
+      width: 320px;
+      font-size: 1.8em;
+      padding-left: 15px;
+    }
+
+    .header-signup, .header-login {
+      display: none;
+    }
+
+    footer {
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      bottom: 0;
+      height: 100px;
+      font-size: 1.5em;
+      padding: 36px 0;
+    }
+
+    .menu-list {
+      top: 80px;
+      padding-top: 48px;
+    }
+
+    .menu-list li {
+      display: block;
+      padding: 20px;
+      font-size: 3em;
+      width: 430px;
+    }
+    
+    .cocktail-info-main {
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .cocktail-picture-info {
+      width: 100%;
+    }
+
+    .cocktail-details {
+      width: 100%;
+    }
+
+    .cocktail-image img {
+      height: 350px;
+    }
+
+    .cocktail-title {
+      font-size: 3em;
+      margin: 20px 0;
+    }
+
+    .star-rating {
+      font-size: 2.5em;
+    }
+
+    .cocktail-details {
+      font-size: 2.5em;
+    }
+
+    .cocktail-description {
+      font-size: 1.8em;
+    }
+
+    .comments-section {
+      font-size: 2em;
+    }
+
+    main {
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+
+    .comment-info {
+      width: 25%;
+    }
+
+    .comment-text {
+      width: 75%;
+    }
+}
