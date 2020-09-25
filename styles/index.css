@@ -1,0 +1,385 @@
+* {
+  font-family: Helvetica Neue Light, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+  
+main {
+  min-height: calc(100vh - 58px - 58px);
+  background-color:rgb(40, 40, 40);
+}
+
+body {
+  background-color: black;
+}
+
+h1 {
+  font-weight: lighter;
+}
+
+.hidden {
+  display: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* HEADER */
+header {
+  z-index: 100;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+  padding: 10px 10px 10px 50px;
+  display: flex;
+  min-width: 860px;
+}
+
+nav {
+    display: block;
+}
+
+.header-menu-title .fa-cocktail {
+  color: blue;
+}
+
+header .header-search {
+  padding-left: 50px;
+  padding-top: 3px;
+  height: 100%;
+}
+
+header .header-search input {
+  box-sizing: border-box;
+  height: 35px;
+  width: 400px;
+  font-size: 1em;
+  outline: none;
+  padding-left: 5px; 
+}
+
+.header-login {
+    margin-left: auto;
+    font-size: 1em;
+    padding: 10px;
+}
+
+.header-signup {
+  font-size: 1em;
+  padding: 10px;
+}
+
+.menu-list {
+  position: absolute;
+  top: 20px;
+  padding-top: 38px;
+  z-index: 20;
+}
+
+.menu-list li {
+  display: block;
+  background-color: rgb(44, 0, 102);
+  font-size: 1.5em;
+  width: 230px;
+}
+
+.menu-list li a {
+  display: block;
+  padding: 10px; 
+  height: 100%;
+  width: 100%;
+}
+
+.menu-list li:hover {
+  background-color: #6f56ff;
+}
+
+.header-menu:hover .main-menu-navigation .menu-list {
+  display: block;
+}
+
+/* HEADER END */
+
+
+/* CATALOG */
+
+.sort-section {
+  padding: 10px 0;
+  box-sizing: border-box;
+  height: 38px;
+  color: white;
+  background-color: rgb(82, 82, 82);
+  display: flex;
+  justify-content: space-between;
+  min-width: 860px;
+}
+
+.filter {
+  position: relative;
+  display: inline-block;
+  margin-left: 60px;
+  height: 100%;
+}
+
+.filter-list, .sort-list {
+  position: absolute;
+  padding-top: 10px;
+  left: -10px;
+  z-index: 100;
+}
+
+.filter-list li, .sort-list li {
+  display: block;
+  padding: 10px;
+  background-color: rgb(82, 82, 82);
+  width: 70px;
+}
+
+.filter-list li a, .sort-list li a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.filter-list li:hover, .sort-list li:hover {
+  background-color: rgb(50, 50, 50);
+}
+
+.filter:hover .filter-list {
+  display: block;
+}
+
+.sort:hover .sort-list {
+  display: block;
+}
+
+.sort-list {
+  text-align: right;
+  left: -50px;
+}
+
+.sort {
+  position: relative;
+  display: inline-block;
+  margin-right: 60px;
+  height: 100%;
+}
+
+.sort-list {
+  position: absolute;
+}
+
+.sort-section a {
+  display: block;
+  height: 100%;
+  font-size: 1em;
+}
+
+.catalog-grid {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 170px);
+  column-gap: 50px;
+  row-gap: 25px;
+  height: 100%;
+  padding:  30px;
+}
+
+.catalog-item {
+  height: 220px;
+  background-color: rgb(50, 50, 50);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  border-width: 1px;
+  border-color: grey;
+  border-style: solid;
+}
+
+.catalog-item:hover {
+  border-color: yellow;
+}
+
+.grid-item-rating {
+  margin: 10px 0;
+}
+
+.fa-star {
+  color: white;
+}
+
+.checked {
+  color: #FFFF00;
+}
+
+.cocktail-image {
+  position: relative;
+  margin-bottom: auto;
+  margin-top: 20px;
+}
+
+.cocktail-image img {
+  position: relative;
+  height: 120px;
+  z-index: 10;
+}
+
+.ingredient-container {
+  position: absolute;
+  top: 0;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 69.5%;
+  width: 90%;
+  border-radius: 0 0 5% 5%;
+  overflow: hidden;
+}
+
+.cocktail-ingredient {
+  position: absolute;
+  top: 0;
+  height:100%;
+  width:100%;
+}
+
+.ingredient1 {
+  clip-path: inset(0 0 0 0);
+  -webkit-clip-path: inset(0 0 0 0);
+  background-color: darkred;
+}
+
+.ingredient2 {
+  clip-path: inset(33% 0 0 0);
+  -webkit-clip-path: inset(33% 0 0 0);
+  background-color: grey;
+}
+
+.ingredient3 {
+  clip-path: inset(66% 0 0 0);
+  -webkit-clip-path: inset(66% 0 0 0);
+  background-color: darkblue;
+}
+
+.cocktail-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.2em;
+}
+
+/* CATALOG END */
+
+
+/* FOOTER */
+
+footer {
+  box-sizing: border-box;
+  width: 100%;
+  height: 58px;
+  background-color: black;
+  font-weight: lighter;
+  min-width: 650px;
+  padding: 20px 50px 20px 50px;
+}
+
+footer .copyright {
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+/* FOOTER END*/
+
+/* SMARTPHONES */
+
+@media only screen
+    and (orientation: portrait) {
+
+    h1 {
+      font-size: 3.7em;
+    }
+
+    header {
+      padding: 30px 50px;
+    }
+
+    header .header-search {
+      margin-left: auto;
+    }
+
+    header .header-search input {
+      height: 60px;
+      width: 320px;
+      font-size: 1.8em;
+      padding-left: 15px;
+    }
+
+    .header-signup, .header-login {
+      display: none;
+    }
+
+    footer {
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      bottom: 0;
+      height: 100px;
+      font-size: 1.5em;
+      padding: 36px 0;
+    }
+
+    .menu-list {
+      top: 80px;
+      padding-top: 48px;
+    }
+
+    .menu-list li {
+      display: block;
+      padding: 20px;
+      font-size: 3em;
+      width: 430px;
+    }
+
+    .sort-section {
+      font-size: 3em;
+      height: 100%;
+    }
+
+    .filter-list li, .sort-list li {
+      width: 150px;
+    }
+
+    .sort-list {
+      left: -65px;
+    }
+
+    .catalog-grid {
+      grid-template-columns: repeat(auto-fit, 600px);
+      row-gap: 50px;
+    }
+
+    .catalog-item {
+      height: 600px;
+      padding: 30px;
+    }
+
+    .cocktail-image img{
+      height: 350px;
+    }
+
+    .cocktail-title {
+      font-size: 5em;
+    }
+
+    .grid-item-rating {
+      font-size: 2.5em;
+  }
+}
