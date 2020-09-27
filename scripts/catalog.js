@@ -1,9 +1,9 @@
 function renderCatalog() {
     let catalogDiv = document.getElementById('catalog-grid');
-    for (let cocktail of cocktails) {
+    cocktailsStorage.getCocktails().forEach(function (cocktail, i) {
       let cocktailNode = document.createElement("a");
       cocktailNode.setAttribute('href', '#');
-      cocktailNode.setAttribute('onclick', `addContent('/cocktail-info'); return false;`);
+      cocktailNode.setAttribute('onclick', `onNavigate('/cocktail-info?id=${i}'); return false;`);
   
       cocktailNode.innerHTML = catalogItem;
 
@@ -17,7 +17,7 @@ function renderCatalog() {
       cocktailRating.innerHTML = createRatingDiv(getCocktailRating(cocktail)).innerHTML;
 
       catalogDiv.append(cocktailNode);
-    }
+    });
   }
 
 function createRatingDiv(rating) {
@@ -32,7 +32,6 @@ function createRatingDiv(rating) {
     }
     ratingDiv.appendChild(starSpan);
   }
-  console.log(ratingDiv.innerHTML);
 
   return ratingDiv;
 }

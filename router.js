@@ -1,13 +1,15 @@
 const routes = {
   '/' : catalog,
   '/catalog' : catalog,
-  '/index.html' : catalog
+  '/index.html' : catalog,
+  '/cocktail-info' : cocktailInfo
 };
 
 const scripts = {
   '/' : "scripts/catalog.js",
   '/catalog' : "scripts/catalog.js",
-  '/index.html' : "scripts/catalog.js"
+  '/index.html' : "scripts/catalog.js",
+  '/cocktail-info' : "scripts/cocktail-info.js"
 }
 
 function getPathWithoutParams(pathname) {
@@ -33,6 +35,19 @@ async function addContent(pathname) {
       addScript(pathname);
     }
   }
+}
+
+const onNavigate = (pathname) => {
+  window.history.pushState(
+    {},
+    pathname,
+    window.location.origin + pathname
+  );
+  addContent(pathname);
+}
+
+window.onpopstate = () => {
+  addContent(window.location.pathname);
 }
 
 const rootDiv = document.getElementById('root');
