@@ -5,6 +5,14 @@
     <title>CocktailDB</title>
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/ingredients.css">
+    <script src="views/catalog.js"></script>
+    <script src="views/catalog-item.js"></script>
+    <script src="views/cocktail-image.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/glass-with-ingredients.js"></script>
+    <script src="models/cocktail.js"></script>
+    <script src="models/ingredient.js"></script>
+    <script src="storage.js"></script>
     <script src="https://kit.fontawesome.com/483fec22dc.js" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -29,147 +37,10 @@
       <a class="header-login" href="login.html">Log in</a>
       <a class="header-signup" href="register.html">Sign up</a>
     </header>
-    <main>
-      <div class="sort-section">
-        <div class="filter">
-          <a class="filter-select" href="#">Filter</a>
-          <ul class="filter-list hidden">
-            <li><a href="#">Top</a></li>
-            <li><a href="#">All</a></li>
-          </ul>
-        </div>
-        <div class="sort">
-          <a class="sort-select" href="#" onclick="return false;">Sort</a>
-          <ul class="sort-list hidden">
-            <li><a href="#">Name</a></li>
-            <li><a href="#">Rating</a></li>
-            <li><a href="#">Date</a></li>
-          </ul>
-        </div>
-      </div>
-      <section class="catalog-grid">
-        <a href="cocktail-info.html">
-          <div class="catalog-item">
-            <div class="cocktail-image">
-              <img src="images/glass.png">
-              <div class="ingredient-container">
-                <div class="cocktail-ingredient ingredient1 light-rum"></div>
-                <div class="cocktail-ingredient ingredient2 water"></div>
-                <div class="cocktail-ingredient ingredient3 lime-juice"></div>
-              </div>
-            </div>
-            <p class="cocktail-title">Mojito</p>
-            <div class="grid-item-rating">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star"></span>
-            </div>
-          </div>
-        </a>
-        <a href="cocktail-info.html">
-          <div class="catalog-item">
-            <div class="cocktail-image">
-              <img src="images/glass.png">
-              <div class="ingredient-container">
-                <div class="cocktail-ingredient ingredient1 light-rum"></div>
-                <div class="cocktail-ingredient ingredient2 water"></div>
-                <div class="cocktail-ingredient ingredient3 lime-juice"></div>
-              </div>
-            </div>
-            <p class="cocktail-title">Mojito</p>
-            <div class="grid-item-rating">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star"></span>
-            </div>
-          </div>
-        </a>
-        <a href="cocktail-info.html">
-          <div class="catalog-item">
-            <div class="cocktail-image">
-              <img src="images/glass.png">
-              <div class="ingredient-container">
-                <div class="cocktail-ingredient ingredient1 light-rum"></div>
-                <div class="cocktail-ingredient ingredient2 water"></div>
-                <div class="cocktail-ingredient ingredient3 lime-juice"></div>
-              </div>
-            </div>
-            <p class="cocktail-title">Mojito</p>
-            <div class="grid-item-rating">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star"></span>
-            </div>
-          </div>
-        </a>
-        <a href="cocktail-info.html">
-          <div class="catalog-item">
-            <div class="cocktail-image">
-              <img src="images/glass.png">
-              <div class="ingredient-container">
-                <div class="cocktail-ingredient ingredient1 light-rum"></div>
-                <div class="cocktail-ingredient ingredient2 water"></div>
-                <div class="cocktail-ingredient ingredient3 lime-juice"></div>
-              </div>
-            </div>
-            <p class="cocktail-title">Mojito</p>
-            <div class="grid-item-rating">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star"></span>
-            </div>
-          </div>
-        </a>
-        <a href="cocktail-info.html">
-          <div class="catalog-item">
-            <div class="cocktail-image">
-              <img src="images/glass.png">
-              <div class="ingredient-container">
-                <div class="cocktail-ingredient ingredient1 light-rum"></div>
-                <div class="cocktail-ingredient ingredient2 water"></div>
-                <div class="cocktail-ingredient ingredient3 lime-juice"></div>
-              </div>
-            </div>
-            <p class="cocktail-title">Mojito</p>
-            <div class="grid-item-rating">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star"></span>
-            </div>
-          </div>
-        </a>
-        <a href="cocktail-info.html">
-          <div class="catalog-item">
-            <div class="cocktail-image">
-              <img src="images/glass.png">
-              <div class="ingredient-container">
-                <div class="cocktail-ingredient ingredient1 light-rum"></div>
-                <div class="cocktail-ingredient ingredient2 water"></div>
-                <div class="cocktail-ingredient ingredient3 lime-juice"></div>
-              </div>
-            </div>
-            <p class="cocktail-title">Mojito</p>
-            <div class="grid-item-rating">
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star"></span>
-            </div>
-          </div>
-        </a>  
-      </section>
-    </main>
+    <main id="root">
+    </main> 
+    <script src="router.js"></script>
+    <!--<script src="scripts/main.js"></script>-->
     <footer>
       <p class="copyright">Created by Danila Moiseenkov</p>
     </footer>
