@@ -20,16 +20,16 @@ function addIngredient() {
     let items = document.getElementsByClassName('ingredient-select-list-item');
   
     if (items.length == maxIngredientsCount - 1) {
-      let addButton = document.getElementById('add-ingredient-button');
-      addButton.style.display = 'none';
+        let addButton = document.getElementById('add-ingredient-button');
+        addButton.style.display = 'none';
     }
   
     if (items.length < maxIngredientsCount) {
-      let ingredientsList = document.querySelector('.ingredients-select-list');
-      let ingredientItem = document.createElement('li');
-      ingredientItem.classList.add('ingredient-select-list-item');
-      ingredientItem.innerHTML = ingredientListItem;
-      ingredientsList.appendChild(ingredientItem);
+        let ingredientsList = document.querySelector('.ingredients-select-list');
+        let ingredientItem = document.createElement('li');
+        ingredientItem.classList.add('ingredient-select-list-item');
+        ingredientItem.innerHTML = ingredientListItem;
+        ingredientsList.appendChild(ingredientItem);
     }
   }
   
@@ -38,8 +38,8 @@ function removeIngredient() {
   
     const maxIngredientsCount = 5;
     if (items.length == maxIngredientsCount) {
-      let addButton = document.getElementById('add-ingredient-button');
-      addButton.style.display = 'block';
+        let addButton = document.getElementById('add-ingredient-button');
+        addButton.style.display = 'block';
     }
     let item = event.srcElement.closest(".ingredient-select-list-item");
     item.parentNode.removeChild(item);
@@ -59,15 +59,15 @@ function recalculateImage() {
     let sumOfValues = 0;
     let ingredients = [];
     for (let i = 0; i < ingredientsCount; i++) {
-      let name = ingredientsSelects[i].value;
-      let value = parseInt(ingredientsValues[i].value) | 0;
-      sumOfValues += value;
-      ingredients.push(new Ingredient(name, value));
+        let name = ingredientsSelects[i].value;
+        let value = parseInt(ingredientsValues[i].value) | 0;
+        sumOfValues += value;
+        ingredients.push(new Ingredient(name, value));
     }
   
     const maxSumOfValues = 100;
     if (sumOfValues > maxSumOfValues) {
-      return;
+        return;
     }
   
     let cocktailImageDiv = document.querySelector('.cocktail-image');
