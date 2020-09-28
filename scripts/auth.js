@@ -2,7 +2,7 @@ function submitLoginForm() {
     let login = document.getElementById('login-input').value;
     let password = document.getElementById('password-input').value;
 
-    onNavigate("/");
+    authService.logIn(login, password);
   }
   
   function submitRegisterForm() {
@@ -15,6 +15,6 @@ function submitLoginForm() {
       return;
     }
     
-    onNavigate("/");
+    authService.signUp(login, password);
   }
   
