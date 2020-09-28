@@ -10,6 +10,8 @@
     <script src="views/cocktail-image.js"></script>
     <script src="views/cocktail-info.js"></script>
     <script src="views/create-cocktail.js"></script>
+    <script src="views/login.js"></script>
+    <script src="views/register.js"></script>
     <script src="scripts/glass-with-ingredients.js"></script>
     <script src="models/cocktail.js"></script>
     <script src="models/ingredient.js"></script>
@@ -25,10 +27,10 @@
         </div>
         <nav class="main-menu-navigation">
           <ul class="menu-list" hidden>
-            <li id="catalog-link"><a href="index.html">Main Page</a></li>
+            <li id="catalog-link"><a href="#" onclick="onNavigate('/');return false;">Main Page</a></li>
             <li id="create-link"><a href="#" onclick="onNavigate('/create-cocktail');return false;">Create Cocktail</a></li>
-            <li id="signup-link"><a href="register.html">Sign up</a></li>
-            <li id="login-link"><a href="login.html">Log in</a></li>
+            <li id="signup-link"><a href="#" onclick="onNavigate('/register');return false;">Sign up</a></li>
+            <li id="login-link"><a href="#" onclick="onNavigate('/login');return false;">Log in</a></li>
             <li id="logout-link"><a>Log out</a></li>
           </ul>
         </nav>
@@ -36,8 +38,8 @@
       <form class="header-search" action="#" method="post">
         <input type="text" name="search-input" placeholder="Search...">
       </form>
-      <a class="header-login" href="login.html">Log in</a>
-      <a class="header-signup" href="register.html">Sign up</a>
+      <a class="header-login" href="#" onclick="onNavigate('/login');return false;">Log in</a>
+      <a class="header-signup" href="#" onclick="onNavigate('/register');return false;">Sign up</a>
     </header>
     <main id="root">
     </main> 

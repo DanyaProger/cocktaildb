@@ -3,7 +3,9 @@ const routes = {
   '/catalog' : catalog,
   '/index.html' : catalog,
   '/cocktail-info' : cocktailInfo,
-  '/create-cocktail' : cocktailCreate
+  '/create-cocktail' : cocktailCreate,
+  '/login' : login,
+  '/register' : register
 };
 
 const scripts = {
@@ -11,7 +13,9 @@ const scripts = {
   '/catalog' : "scripts/catalog.js",
   '/index.html' : "scripts/catalog.js",
   '/cocktail-info' : "scripts/cocktail-info.js",
-  '/create-cocktail' : "scripts/create-cocktail.js"
+  '/create-cocktail' : "scripts/create-cocktail.js",
+  '/login' : "scripts/auth.js",
+  '/register' : "scripts/auth.js"
 }
 
 function getPathWithoutParams(pathname) {
