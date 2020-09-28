@@ -75,6 +75,8 @@ function recalculateImage() {
 }
   
 function submitForm() {
+    let user = authService.user;
+
     let name = document.getElementById('cocktail-name').value;
     let description = document.getElementById('description-textarea').value;
   
@@ -98,7 +100,7 @@ function submitForm() {
         ingredients.push(new Ingredient(name, value));
     }
   
-    let cocktail = new Cocktail(name.trim(), 'Admin', description, ingredients);
+    let cocktail = new Cocktail(name.trim(), user, description, ingredients);
     cocktailsStorage.addCocktail(cocktail);
     onNavigate('/');
 }

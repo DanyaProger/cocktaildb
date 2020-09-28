@@ -1,6 +1,6 @@
 class userComment {
-    constructor(text) {
-      this.author = 'Admin';
+    constructor(author, text) {
+      this.author = author;
       this.text = text;
       this.date = new Date();
     }

@@ -20,6 +20,7 @@ class Storage {
             [new Ingredient("rum", 33), new Ingredient("bourbon", 33), new Ingredient("cocacola", 34)]
         )
       ];
+      this.cocktails[0].marks = {'danila': 4};
     }
   
     addCocktail(cocktail) {
@@ -34,8 +35,8 @@ class Storage {
       return this.cocktails[id];
     }
   
-    addMark(cocktailId, mark) {
-      this.cocktails[cocktailId].marks.push(mark);
+    addMark(cocktailId, user, mark) {
+      this.cocktails[cocktailId].marks[user] = mark;
     }
   
     addUserComment(cocktailId, comment) {

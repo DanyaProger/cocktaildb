@@ -10,6 +10,10 @@ function setInfo(cocktail) {
     setIngredients(cocktail);
     setDetails(cocktail);
     renderComments(cocktail);
+
+    if(authService.isAuthenticated()) {
+        checkMark(authService.user, cocktail);
+    }
 }
 
 function setPicture(cocktail) {
@@ -72,15 +76,38 @@ function renderComments(cocktail) {
     });
 }
 
-function setMark(button) {
-    let mark = parseInt(button.value);
-    let cocktailId = getURLParam('id');
-    cocktailsStorage.addMark(cocktailId, mark);
-    let cocktail = cocktailsStorage.getCocktail(cocktailId);
-    document.querySelector('.average-mark').textContent = getCocktailRating(cocktail).toFixed(2);
+function checkMark(user, cocktail) {
+    if ('marks' in cocktail) {
+      let marks = cocktail.marks;
+      if (user in marks) {
+        let input = document.getElementsByClassName('star-rating-input');
+        input[5 - marks[user]].checked = true;
+      }
+    }
   }
 
+function setMark(button) {
+    let isAuth = authService.isAuthenticated();
+    if (!isAuth) {
+        alert('Log in for rate cocktail.');
+        return;
+    }
+    let user = authService.user;
+
+    let mark = parseInt(button.value);
+    let cocktailId = getURLParam('id');
+    cocktailsStorage.addMark(cocktailId, user, mark);
+    let cocktail = cocktailsStorage.getCocktail(cocktailId);
+    document.querySelector('.average-mark').textContent = getCocktailRating(cocktail).toFixed(2);
+}
+
 function sendComment() {
+    if (!authService.isAuthenticated()) {
+        alert('Log in for leave comments.');
+        return;
+    }
+    let user = authService.user;
+
     let input = document.getElementById('comment');
     let text = input.value;
   
@@ -88,11 +115,11 @@ function sendComment() {
       return;
     }
     input.value = "";
-    let comment = new userComment(text);
+    let comment = new userComment(user, text);
     let cocktailId = getURLParam('id');
     cocktailsStorage.addUserComment(cocktailId, comment);
     let cocktail = cocktailsStorage.getCocktail(cocktailId);
     renderComments(cocktail);
-  }
+}
 
 renderCocktailInfo();
