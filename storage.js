@@ -23,7 +23,7 @@ class Storage {
     }
   
     addCocktail(cocktail) {
-      
+      this.cocktails.push(cocktail);
     }
   
     getCocktails() {

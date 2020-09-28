@@ -8,7 +8,7 @@ function renderCatalog() {
       cocktailNode.innerHTML = catalogItem;
 
       let cocktailImageDiv = cocktailNode.querySelector(".cocktail-image");
-      cocktailImageDiv.innerHTML = createCocktailImageDiv(cocktail).innerHTML;
+      cocktailImageDiv.innerHTML = createCocktailImageDiv(cocktail.ingredients).innerHTML;
 
       let cocktailTitle = cocktailNode.querySelector(".cocktail-title");
       cocktailTitle.textContent = cocktail.name;

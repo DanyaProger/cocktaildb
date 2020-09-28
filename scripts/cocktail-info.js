@@ -14,7 +14,7 @@ function setInfo(cocktail) {
 
 function setPicture(cocktail) {
     let cocktailImageDiv = document.querySelector(".cocktail-image");
-    cocktailImageDiv.innerHTML = createCocktailImageDiv(cocktail).innerHTML;
+    cocktailImageDiv.innerHTML = createCocktailImageDiv(cocktail.ingredients).innerHTML;
 }
 
 function setTitle(cocktail) {

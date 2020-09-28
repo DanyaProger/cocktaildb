@@ -3,20 +3,20 @@ function getIngredientStyleString(value) {
     -webkit-clip-path: inset(${value}% 0 0 0);`;
   }
   
-function createCocktailImageDiv(cocktail) {
+function createCocktailImageDiv(ingredients) {
     let cocktailImageDiv = document.createElement("div");
     cocktailImageDiv.classList.add("cocktail-image");
     cocktailImageDiv.innerHTML = cocktailImage;
 
     let sumOfIngredients = 0;
 
-    for (let ingredient of cocktail.ingredients) {
+    for (let ingredient of ingredients) {
         sumOfIngredients += ingredient.value;
     }
 
     let ingredientContainer = cocktailImageDiv.querySelector(".ingredient-container");
 
-    for (let ingredient of cocktail.ingredients) {
+    for (let ingredient of ingredients) {
         let ingredientDiv = document.createElement("div");
         ingredientDiv.classList.add("cocktail-ingredient");
         ingredientDiv.classList.add(ingredient.name);
