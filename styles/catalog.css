@@ -135,12 +135,13 @@ main {
   width: 90%;
   border-radius: 0 0 5% 5%;
   overflow: hidden;
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
 }
 
 .cocktail-ingredient {
-  position: absolute;
-  top: 0;
-  height:100%;
   width:100%;
 }
 

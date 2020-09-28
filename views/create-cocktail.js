@@ -11,7 +11,7 @@ const cocktailCreate = `
         <div class="vertical-seporator"></div>
         <div class="cocktail-form-right">
         <div class="add-ingredients-section">
-            <ul class="ingredients-select-list">
+            <ol class="ingredients-select-list">
             <li class="ingredient-select-list-item">
                 <div class="flex-ingredient-wrap">
                     <select class="ingredients-select" name="ingredients-select" onchange="recalculateImage();">
@@ -28,7 +28,7 @@ const cocktailCreate = `
                     <input class="ingredient-value-input" type="number" name="ingredient-value" value="" placeholder="%" oninput="recalculateImage();" required>
                 </div>
             </li>
-            </ul>
+            </ol>
             <button id="add-ingredient-button" type="button" name="add-ingredient-button" onclick="addIngredient();">+</button>
         </div>
         <textarea id="description-textarea" name="name" rows="4" placeholder="Description"></textarea>

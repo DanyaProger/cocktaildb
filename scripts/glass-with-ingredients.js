@@ -1,6 +1,7 @@
 function getIngredientStyleString(value) {
-    return `clip-path: inset(${value}% 0 0 0);
-    -webkit-clip-path: inset(${value}% 0 0 0);`;
+    /*return `clip-path: inset(${value}% 0 0 0);
+    -webkit-clip-path: inset(${value}% 0 0 0);`;*/
+    return `height: ${value}%`;
   }
   
 function createCocktailImageDiv(ingredients) {
@@ -17,10 +18,10 @@ function createCocktailImageDiv(ingredients) {
     let ingredientContainer = cocktailImageDiv.querySelector(".ingredient-container");
 
     for (let ingredient of ingredients) {
-        let ingredientDiv = document.createElement("div");
+        let ingredientDiv = document.createElement("li");
         ingredientDiv.classList.add("cocktail-ingredient");
         ingredientDiv.classList.add(ingredient.name);
-        ingredientDiv.setAttribute("style", getIngredientStyleString(100 - sumOfIngredients | 0));
+        ingredientDiv.setAttribute("style", getIngredientStyleString(ingredient.value));
         sumOfIngredients -= ingredient.value;
         ingredientContainer.appendChild(ingredientDiv);
     }

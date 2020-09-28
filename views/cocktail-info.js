@@ -4,7 +4,7 @@ const cocktailInfo = `
 <div class="cocktail-info-main">
     <div class="cocktail-picture-info">
         <div class="cocktail-image"></div>
-        <p class="cocktail-title">Mojito</p>
+        <h2 class="cocktail-title">Mojito</h2>
         <div class="star-rating">
             <input class="star-rating-input" id="star-rating-5" type="radio" name="rating" value="5" onclick="setMark(this);">
             <label class="star-rating-icon fa fa-star" for="star-rating-5"></label>
@@ -19,11 +19,11 @@ const cocktailInfo = `
         </div>
     </div>
     <div class="cocktail-details">
-    <ul class="ingredients">
+    <ol class="ingredients">
         <li class="ingredient"><span class="ingedient-name">Water</span> <span class="ingedient-value">33%</span></li>
         <li class="ingredient"><span class="ingedient-name">Light rum</span> <span class="ingedient-value">33%</span></li>
         <li class="ingredient"><span class="ingedient-name">Lime</span> <span class="ingedient-value">34%</span></li>
-    </ul>
+    </ol>
     <div class="bottom-details">
         <p>Average mark: <span class="average-mark">5</span></p>
         <p>Added by: <span class="cocktail-author">Admin</span></p>

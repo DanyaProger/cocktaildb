@@ -12,6 +12,10 @@ h1 {
   font-weight: lighter;
 }
 
+h2 {
+  font-weight: lighter;
+}
+
 .hidden {
   display: none;
 }
@@ -90,6 +94,15 @@ header .header-search input {
   padding: 10px; 
   height: 100%;
   width: 100%;
+}
+
+.menu-list li button {
+  display: block;
+  padding: 5px 10px;
+  height: 100%;
+  width: 100%;
+  font-size: 1em;
+  text-align: left;
 }
 
 .menu-list li:hover {

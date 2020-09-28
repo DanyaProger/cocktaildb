@@ -1,6 +1,6 @@
 main {
   display: block;
-  min-height: 600px;
+  min-height: calc(100vh - 58px - 58px);
   background-color: rgb(40, 40, 40);
   color: white;
   box-sizing: border-box;
@@ -54,12 +54,13 @@ main {
   width: 90%;
   border-radius: 0 0 5% 5%;
   overflow: hidden;
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
 }
 
 .cocktail-ingredient {
-  position: absolute;
-  top: 0;
-  height:100%;
   width:100%;
 }
 
@@ -127,6 +128,7 @@ main {
 
 .ingredients {
   margin-top: 20px;
+  list-style-type: none;
 }
 
 .ingredients li {
