@@ -14,39 +14,24 @@ main {
   min-width: 860px;
 }
 
-.filter {
-  position: relative;
-  display: inline-block;
-  margin-left: 60px;
-  height: 100%;
-}
-
-.filter-list, .sort-list {
+.sort-list {
   position: absolute;
   padding-top: 10px;
   left: -10px;
   z-index: 100;
 }
 
-.filter-list li, .sort-list li {
+.sort-list li {
   display: block;
   padding: 10px;
   background-color: rgb(82, 82, 82);
   width: 70px;
 }
 
-.filter-list li a, .sort-list li a {
+.sort-list li a {
   display: block;
   height: 100%;
   width: 100%;
-}
-
-.filter-list li:hover, .sort-list li:hover {
-  background-color: rgb(50, 50, 50);
-}
-
-.filter:hover .filter-list {
-  display: block;
 }
 
 .sort:hover .sort-list {
@@ -62,6 +47,7 @@ main {
   position: relative;
   display: inline-block;
   margin-right: 60px;
+  margin-left: auto;
   height: 100%;
 }
 
@@ -180,7 +166,7 @@ main {
       height: 100%;
     }
 
-    .filter-list li, .sort-list li {
+    .sort-list li {
       width: 150px;
     }
 

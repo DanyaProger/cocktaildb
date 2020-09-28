@@ -84,5 +84,3 @@ function useAuthorizedLayout() {
 
 let authService = new AuthService();
 useUnauthorizedLayout();
-
-authService.logIn('danila', '1234');

@@ -17,6 +17,26 @@ function getURLParam(param) {
   return value;
 }
 
+function searchCocktail() {
+  let input = document.getElementById("search-input");
+  let text = input.value.trim().toLowerCase();
+  input.value = "";
+  if (text.trim() == "") {
+    return;
+  }
+
+  let cocktails = cocktailsStorage.getCocktails();
+
+  for (let id in cocktails) {
+    let cocktailName = cocktails[id].name.toLowerCase();
+    if (cocktailName.includes(text)) {
+      onNavigate('/cocktail-info?id=' + id);
+      return;
+    }
+  }
+  alert("Sorry, we couldn't find such cocktail.");
+}
+
 logoutLink = document.querySelector('.logout-button')
 logoutLink.addEventListener("click", (e) => {
   authService.logOut();

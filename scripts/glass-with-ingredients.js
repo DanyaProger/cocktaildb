@@ -11,20 +11,20 @@ function createCocktailImageDiv(ingredients) {
 
     let sumOfIngredients = 0;
 
-    for (let ingredient of ingredients) {
+    ingredients.forEach(ingredient => {
         sumOfIngredients += ingredient.value;
-    }
+    });
 
     let ingredientContainer = cocktailImageDiv.querySelector(".ingredient-container");
 
-    for (let ingredient of ingredients) {
+    ingredients.forEach(ingredient => {
         let ingredientDiv = document.createElement("li");
         ingredientDiv.classList.add("cocktail-ingredient");
         ingredientDiv.classList.add(ingredient.name);
         ingredientDiv.setAttribute("style", getIngredientStyleString(ingredient.value));
         sumOfIngredients -= ingredient.value;
         ingredientContainer.appendChild(ingredientDiv);
-    }
+    });
 
     return cocktailImageDiv;
 }
