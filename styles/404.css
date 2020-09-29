@@ -1,0 +1,6 @@
+main {
+    width: 100%;
+    min-height: calc(100vh - 58px - 58px);
+    background-color:rgb(40, 40, 40);
+    color: white;
+  }
