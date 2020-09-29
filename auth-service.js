@@ -16,33 +16,34 @@ class AuthService {
   }
 
   logIn(login, password) {
-    if (login in this.users && this.users[login] == password)
+    /*if (login in this.users && this.users[login] == password)
     {
         this.setUser(login);
         useAuthorizedLayout();
         onNavigate('/');
-    }
-    else
-    {
-        alert('Login or password is wrong.')
-    }
+    }*/
+    firebase.auth().signInWithEmailAndPassword(login, password).then(() => {
+      onNavigate('/');
+    }).catch(function(error) {
+      alert('Login or password is wrong.');
+    });
   }
 
   signUp(login, password) {
-    if (!(login in this.users))
-    {
-        this.users[login] = password;
-        this.logIn(login, password);
-    }
-    else
-    {
-        alert('Login or password is wrong.')
-    }
+    firebase.auth().createUserWithEmailAndPassword(login, password).then(() => {
+      onNavigate('/');
+    }).catch(function(error) {
+      alert('Login or password is wrong.')
+    });
   }
 
   logOut() {
     this.user = null;
-    useUnauthorizedLayout();
+    firebase.auth().signOut().then(function() {
+      useUnauthorizedLayout();
+    }).catch(function(error) {
+      // An error happened.
+    });
   }
 }
 
@@ -71,7 +72,7 @@ function useAuthorizedLayout() {
   document.getElementById('create-link').style.display = 'block';
 
   let loginLink = document.querySelector('.header-login');
-  loginLink.textContent = authService.user;
+  loginLink.textContent = authService.user.email;
   loginLink.onclick = () => {
       return false;
   };
@@ -81,6 +82,16 @@ function useAuthorizedLayout() {
     authService.logOut();return false;
   };
 }
+
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    authService.user = user;
+    useAuthorizedLayout();
+    onNavigate('/');
+  } else {
+    authService.logOut();
+  }
+});
 
 let authService = new AuthService();
 useUnauthorizedLayout();

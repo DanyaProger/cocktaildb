@@ -35,8 +35,8 @@ class Storage {
       return this.cocktails[id];
     }
   
-    addMark(cocktailId, user, mark) {
-      this.cocktails[cocktailId].marks[user] = mark;
+    addMark(cocktailId, uid, mark) {
+      this.cocktails[cocktailId].marks[uid] = mark;
     }
   
     addUserComment(cocktailId, comment) {

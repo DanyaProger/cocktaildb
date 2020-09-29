@@ -79,9 +79,9 @@ function renderComments(cocktail) {
 function checkMark(user, cocktail) {
     if ('marks' in cocktail) {
       let marks = cocktail.marks;
-      if (user in marks) {
+      if (user.uid in marks) {
         let input = document.getElementsByClassName('star-rating-input');
-        input[5 - marks[user]].checked = true;
+        input[5 - marks[user.uid]].checked = true;
       }
     }
   }
@@ -96,7 +96,7 @@ function setMark(button) {
 
     let mark = parseInt(button.value);
     let cocktailId = getURLParam('id');
-    cocktailsStorage.addMark(cocktailId, user, mark);
+    cocktailsStorage.addMark(cocktailId, user.uid, mark);
     let cocktail = cocktailsStorage.getCocktail(cocktailId);
     document.querySelector('.average-mark').textContent = getCocktailRating(cocktail).toFixed(2);
 }
@@ -115,7 +115,7 @@ function sendComment() {
       return;
     }
     input.value = "";
-    let comment = new userComment(user, text);
+    let comment = new userComment(user.email, text);
     let cocktailId = getURLParam('id');
     cocktailsStorage.addUserComment(cocktailId, comment);
     let cocktail = cocktailsStorage.getCocktail(cocktailId);

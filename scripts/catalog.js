@@ -2,6 +2,8 @@ function renderCatalog() {
     let catalogDiv = document.getElementById('catalog-grid');
     let cocktails = filterCatalog(getURLParam('sort'), cocktailsStorage.getCocktails());
 
+    catalogDiv.innerHTML = "";
+
     cocktails.forEach((cocktailWithId) => {
       let cocktail = cocktailWithId.value;
       let i = cocktailWithId.id;
