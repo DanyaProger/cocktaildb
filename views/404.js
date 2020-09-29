@@ -1,0 +1,1 @@
+const notFound = `<h1 class="not-found-message">Page not found!</h1>`;

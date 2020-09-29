@@ -5,8 +5,11 @@ const routes = {
   '/cocktail-info' : cocktailInfo,
   '/create-cocktail' : cocktailCreate,
   '/login' : login,
-  '/register' : register
+  '/register' : register,
+  '/404' : notFound
 };
+
+const authRoutes = ['/create'];
 
 const scripts = {
   '/' : "scripts/catalog.js",
@@ -35,11 +38,22 @@ function addScript(pathname) {
 
 async function addContent(pathname) {
   pathname = getPathWithoutParams(pathname);
+
+  if (authRoutes.includes(pathname)) {
+    if (!authService.isAuthenticated()) {
+      onNavigate('/404');
+      return;
+    }
+  }
+
   if (pathname in routes) {
     rootDiv.innerHTML = routes[pathname];
     if (pathname in scripts) {
       addScript(pathname);
     }
+  }
+  else {
+    onNavigate('/404');
   }
 }
 
@@ -47,7 +61,7 @@ const onNavigate = (pathname) => {
   window.history.pushState(
     {},
     pathname,
-    window.location.origin + pathname
+    window.location.href + pathname
   );
   addContent(pathname);
 }
